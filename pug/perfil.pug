@@ -1,0 +1,29 @@
+mixin projects (imagen, titulo, parrafo)
+  article.proyect-container
+    img(src="../assets/img/"+imagen)
+    h4=titulo
+    p=parrafo
+
+doctype html
+html(lang="en")
+  include componentes/head.pug
+  body
+    include componentes/header.pug
+    main
+      section.profile-main-container
+        div.grid-container.profile-container
+          div
+            img(src="/assets/img/profile-pic.jpg", alt="")
+          div
+           h2 Hola, mi nombre es Jimmy J. Pecho Malqui!
+           p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed unde placeat omnis quae autem incidunt officiis dolor fugiat quod aperiam ipsum sint voluptatum adipisci quos tempora, id maxime odio error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem repellendus repellat culpa ex maxime laborum corrupti doloremque.
+      section.profile-main-proyects
+        div.grid.container
+          h3 Proyectos
+          div.proyects-main-container
+            +projects('post-1.png', 'Título', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed unde placeat omnis quae autem incidunt officiis dolor fugiat quod aperiam ipsum sint voluptatum adipisci quos tempora, id maxime odio error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem repellendus repellat culpa ex maxime laborum corrupti doloremque.')
+            +projects('post-1.png', 'Título', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed unde placeat omnis quae autem incidunt officiis dolor fugiat quod aperiam ipsum sint voluptatum adipisci quos tempora, id maxime odio error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem repellendus repellat culpa ex maxime laborum corrupti doloremque.')
+            +projects('post-1.png', 'Título', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed unde placeat omnis quae autem incidunt officiis dolor fugiat quod aperiam ipsum sint voluptatum adipisci quos tempora, id maxime odio error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem repellendus repellat culpa ex maxime laborum corrupti doloremque.')
+
+      include componentes/contacto.pug
+    include componentes/footer.pug

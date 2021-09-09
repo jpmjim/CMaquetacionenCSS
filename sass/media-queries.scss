@@ -1,0 +1,14 @@
+@media (max-width: 900px) {
+  .new__article{
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    .new__img {
+      grid-row: 2;
+    }
+    .new__info {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+}
+

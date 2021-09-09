@@ -1,0 +1,35 @@
+mixin article (imagen, titulo, parrafo)
+  article.articulo__posts
+    .articulo__img: img(src="../assets/img/"+imagen)
+    p.articulo__title=titulo
+    p.articulo__contenido=parrafo
+    a.articulo__boton(href="/html/blog.html") Leer más
+      
+
+doctype html
+html(lang="en")
+  include componentes/head.pug
+  body
+    include componentes/header.pug
+    main.blogs
+      section.blogs__new
+        div.new__article.grid-container
+          h2 Noticias
+          div.new__img 
+            img(src="../assets/img/main-news-img.png", alt="")
+          div.new__info 
+            h2 Título del Blogpost
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.
+            a.articulo__boton(href="/html/blog.html") Leer más
+        
+      section.articulo
+        div.grid-container
+          h3 Últimos blogposts
+          +article('post-1.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+          +article('post-2.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+          +article('post-3.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+          +article('post-1.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+          +article('post-2.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+          +article('post-3.png','Título del post','Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a excepturi repellendus assumenda totam doloremque, qui consectetur aliquam neque debitis! Commodi nobis debitis ipsa vitae aut molestiae earum itaque placeat.')
+    include componentes/footer.pug
+
